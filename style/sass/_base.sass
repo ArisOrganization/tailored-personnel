@@ -1,0 +1,120 @@
+html 
+    max-width: 100%
+    overflow-x: hidden
+    margin: 0
+    padding: 0
+body
+    background-color: #FFFFFF
+    font-family: $font
+    font-size: 16px
+    color: black
+    margin: 0
+    padding: 0
+    overflow-x: hidden 
+    * 
+        font-family: $font
+    
+    section 
+        padding-bottom: 30px
+     
+    label.accessibility-label
+        font-size: 0
+        color: transparent
+        padding: 0
+        margin: 0
+        display: inline
+        opacity: 0
+    
+    a.named-tag 
+        font-size: 0!important
+        color: transparent!important 
+    &.scroll-lock
+        overflow: hidden!important
+        height: 100vh
+    .desktop-content
+        display: block
+    .tablet-content
+        display: none 
+    .mobile-content
+        display: none 
+    * 
+        margin: 0
+        padding: 0 
+ 
+    img
+        max-width: 100%
+        display: block  
+
+    .cta-container 
+        display: block  
+        margin-top: 50px
+        text-align: center 
+        width: 100%  
+        
+            
+    main
+        .page-content
+
+
+    .loader-modal 
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0,0,0,0.4)
+        z-index: 999999
+        pointer-events: none 
+        opacity: 0
+        transition: ease-in-out 200ms all
+        display: flex
+        align-items: center
+        justify-content: center
+        &.show-loader
+            transition: ease-in-out 200ms all
+            opacity: 1
+            pointer-events: all
+            > div 
+                opacity: 1
+                transform: scale(1)
+                transition: ease-in-out 520ms all 
+        > div 
+            opacity: 0
+            overflow: hidden
+            transform: scale(0)
+            transition: ease-in-out 120ms all
+            background: #bdbdbd
+            padding-bottom: 20px
+            border-radius: 3px
+            font-size: 30px
+            color: black
+            p
+                background: black
+                color: white
+                padding: 15px 30px
+                border-top: 5px solid #695c1f
+                text-transform: uppercase
+                letter-spacing: 1px
+                font-weight: 100
+                font-size: 17px
+
+
+    .loader 
+        height: 50px 
+        width: 50px 
+        border-radius: 50%
+        border: 9px solid $color-black-shade
+        border-top: 9px solid $color-primary
+        display: block 
+        position: relative
+        margin: 20px auto 0
+        transition: ease-in-out 200ms all
+        animation: rotate 1.5s linear infinite
+        // &.show-loader
+        //     height: 70px 
+        //     width: 70px 
+        //     transition: ease-in-out 200ms all
+
+@keyframes rotate
+    to
+        transform: rotate(360deg)

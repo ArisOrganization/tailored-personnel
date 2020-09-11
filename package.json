@@ -1,0 +1,48 @@
+{
+  "name": "tailored-personnel",
+  "version": "1.0.0",
+  "description": "Tailored Personnel Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build-development": "NODE_ENV='development' node ./node_modules/.bin/gulp",
+    "build-production": "NODE_ENV='production' node ./node_modules/.bin/gulp",
+    "build-package": "NODE_ENV='package' node ./node_modules/.bin/gulp package",
+    "build-zipup": "node ./node_modules/.bin/gulp zipup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Recruitment",
+    "HTML",
+    "CSS",
+    "Gulp"
+  ],
+  "author": "James Exton",
+  "license": "ISC",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.2",
+    "moment": "^2.25.3",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-archiver": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-compress": "0.0.9",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-terser": "^1.2.0"
+  }
+}

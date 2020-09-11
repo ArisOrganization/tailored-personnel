@@ -1,0 +1,163 @@
+section 
+	&.hero
+		background-image: url('/assets/img/hero-bg1.jpg')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		min-height: 60vh	
+		padding-top: 90px
+		position: relative
+		padding-bottom: 60px
+		&:before 
+			content: ""
+			background-color: rgba(0,0,0,0.6)
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100% 
+		.hero-content
+			min-height: calc(70vh - 100px)
+			display: flex
+			align-items: flex-start
+			color: white
+			margin-top: 60px
+			h1 
+				font-size: 4.1rem
+				color: $color-primary
+				font-weight: 700
+				span 
+					font-weight: 400	
+					color: white
+			.tagline 
+				font-weight: 100
+				font-size: 29px
+				font-style: italic
+		.hero-form 
+			height: 100% 
+			display: flex
+			align-items: center
+			flex-direction: column
+			justify-content: flex-start
+			margin-top: 60px
+			.form-title-content
+				background-color: white 
+				margin-bottom: 5px 
+				padding: 30px 15px
+				width: 100%
+				border-top: 6px solid $color-primary
+				p
+					font-weight: 300
+					color: black	
+					text-align: center
+					font-size: 30px
+					line-height: 1.2
+					span 
+						font-weight: 400
+			.form-container 
+				form#hero-form,
+				form#hero-form-alt,
+				form#hero-form-rf  
+					display: grid
+					align-items: flex-start
+
+					.form-step
+						grid-column: 1
+						grid-row: 1
+
+						pointer-events: none
+						transform: translateX(40px)
+						transition: all .62s ease-in-out
+						opacity: 0
+ 
+						background-color: white 
+						margin-bottom: 5px 
+						padding: 30px 
+						width: 100%
+						&.step-current 
+							pointer-events: all
+							opacity: 1
+							transform: none
+
+						.step-title 
+							border-bottom: 1px solid lightgrey
+							margin-bottom: 15px
+							position: relative
+							// padding-left: 65px
+							.step-num
+								position: absolute 
+								left: 0
+								top: 50% 
+								transform: translateY(-50%)
+								height: 50px 
+								width: 50px
+								border: 1px solid black
+								text-align: center 
+							p 
+								&:first-of-type 
+									font-size: 20px 
+									font-weight: 700 
+									display: flex 
+									justify-content: space-between
+									align-items: center 
+
+									span 
+										// display: none
+								&.step-req
+									font-weight: 300 
+									font-size: 15px
+									padding-bottom: 15px
+						.form-fields 
+							fieldset 
+								display: flex 
+								flex-direction: column
+								margin-top: 25px
+								border: none
+								label
+									margin-bottom: 0
+									font-size: 12px 
+									text-transform: uppercase 
+									color: lightgrey
+									width: 100% 
+									letter-spacing: 1px
+									&.error 
+										text-transform: none
+										margin-top: 4px
+										letter-spacing: 0
+										color: red
+								input
+									width: 100% 
+									border: none 
+									border-bottom: 1px solid lightgrey 
+									font-size: 24px 
+									font-weight: 300
+									outline: none
+									padding: 6px 0 2px
+							
+
+
+					.form-button-container
+						position: relative
+						width: 100% 
+						height: 100px
+						overflow: hidden
+
+						button 
+							position: absolute 
+							left: 0
+							right: 0
+							top: 0
+							bottom: 0
+							background-color: $color-primary 
+							width: 100% 
+							border: none
+							margin-bottom: 5px
+							color: white
+							font-size: 30px
+							font-weight: 100
+							text-transform: uppercase
+							letter-spacing: 1px
+							cursor: pointer
+
+
+

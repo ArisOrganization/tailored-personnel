@@ -1,0 +1,63 @@
+section 
+	&.faqs
+		margin: 100px 0
+		.cta 
+			margin: 0 auto
+			display: block!important
+		.faq-title-container 
+			text-align: center
+			max-width: 800px
+			margin: 20px auto 50px
+			h4   
+				font-size: 2.5rem
+				font-weight: 800
+				color: $color-primary
+				margin-bottom: 15px
+			p 
+				font-size: 1.1rem
+				color: #929292
+				font-weight: 100
+		.faq-content-container 
+			max-width: 800px
+			margin: 0 auto
+			.faq-item 
+				margin-bottom: 15px 
+				border: 1px solid whitesmoke
+				p 
+					padding: 15px 
+					margin: 0
+
+				p:first-of-type 
+					padding-left: 50px 
+					position: relative 
+					background-color: $color-primary
+
+					background:  #313131  /* fallback for old browsers */
+					background: -webkit-linear-gradient(to right, #222,  #313131)  /* Chrome 10-25, Safari 5.1-6 */
+					background: linear-gradient(to right, #222, #313131) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+					color: white 
+					font-weight: 800
+					&:before 
+						content: "Q."
+						position: absolute
+						left: 20px
+						top: 50%
+						transform: translateY(-50%)
+				p:last-of-type 
+					background-color: whitesmoke 
+					color: #404040
+					border: 1px solid #e5e5e5
+					font-weight: 100
+					padding-left: 50px 
+					position: relative 
+
+					&:before 
+						content: "A."
+						font-weight: 800
+						position: absolute
+						left: 20px
+						top: 28px
+						transform: translateY(-50%)
+
+

@@ -1,0 +1,142 @@
+// @media screen and (max-width: 1200px)  
+// @media screen and (max-width: 992px)  
+// @media screen and (max-width: 769px)
+@media screen and (max-width: 580px) 
+    .desktop-content
+        display: none!important
+    .mobile-content
+        display: block!important
+    .bigger
+        font-size: 23px
+    header 
+        .inner-header 
+            .header-logo-container 
+                img
+                    max-height: 40px
+            .header-contact-container 
+                .inner-header-contact 
+                    p 
+                        a
+                            background-image: none
+                            padding: 15px 0 0 0
+                            font-size: 20px
+    footer.footer
+        .footer-links 
+            ul 
+                flex-direction: column
+                text-align: left
+                justify-content: flex-start
+                li  
+                    padding: 0
+                    border: none
+                    margin-bottom: 10px
+        .footer-right 
+            flex-direction: column 
+            height: 100%
+            float: none
+            align-items: flex-start
+            margin-top: 30px
+            .footer-logo 
+                margin-bottom: 10px
+            p
+                text-align: center
+                width: 100%
+    section
+        &.hero 
+            padding-top: 60px
+            .hero-content  
+                margin-top: 10px
+                min-height: 0
+                h1 
+                    font-size: 25px
+                    font-weight: 700
+                    margin-bottom: 5px
+                .tagline 
+                    font-size: 19px
+                    margin-bottom: 10px
+            .hero-form 
+                margin-top: 0
+                .form-step 
+                    padding: 15px
+                    .form-fields 
+                        fieldset fieldset
+                            margin-top: 15px
+                            input
+                                font-size: 16px
+                .form-button-container
+                    height: 60px
+                    button 
+                        font-size: 20px
+
+            .form-title-content 
+                display: none
+        &.process 
+            .inner-process 
+                flex-direction: column
+                > div 
+                    width: 100%
+                    padding-bottom: 60px
+                    &:after  
+                        left: 50%
+                        transform: translateX(-50%) rotate(90deg)
+                        top: calc(100% - 40px)
+        &.clients
+            .inner-clients 
+                .clients-title  
+                    width: 100%
+                    text-align: center
+                    height: 110px 
+                    p 
+                        width: 100%
+                .slick-slider
+                    padding-top: 70px
+        &.choosing 
+            .chose-content 
+                .inner-chose-content
+                    &:before 
+                        transform: rotate(45deg) scale(2.4)
+        &.roles 
+            border-bottom: none
+            padding: 0 
+            &:before
+                top: 0
+            .roles-content 
+                padding: 20px 0px
+                h3 
+                    margin: 20px 0 
+            .image-container
+                transform: none
+                > div
+                    height: 140px
+                    // transform: none!important
+        &.half-half-section
+            padding: 50px 0
+            .half-content 
+                .inner-prep-content 
+                    padding: 30px 15px
+                    ul  
+                        flex-direction: column
+                        li 
+                            width: 100%
+        &.prep-form
+            margin-top: 0
+            .prep-form-info
+                padding: 0 15px
+            .prep-form-container
+                width: calc(100% - 30px)
+                margin-left: 0
+                margin: 0 auto
+
+@media screen and (max-width: 480px)
+    .extra-header
+        p 
+            a 
+                font-size: 14px
+                
+    section    
+        &.hero 
+            .hero-content   
+                h1 
+                    font-size: 23px
+// @media screen and (max-width: 375px)
+// @media screen and (max-width: 321px)

@@ -1,0 +1,73 @@
+footer
+  &.footer
+    position: relative
+    display: block
+    background-color: white
+    color: $color-secondary
+    padding: 50px 0
+    font-size: 16px  
+    border-top: 1px solid #d4d4d4
+    * 
+      font-size: 16px 
+    .footer-right
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      float: right
+      align-items: flex-end
+      height: 100%
+      .footer-logo
+        padding: 15px 
+        height: 120px
+        width: 120px 
+        background-color: $color-secondary 
+        display: flex
+        align-items: center
+        justify-content: center 
+        border-radius: 3px 
+        img 
+          max-width: 100% 
+          margin: 0
+      p    
+        text-transform: uppercase
+        letter-spacing: 1px
+        color: #a1a1a1
+        font-size: 14px
+        text-decoration: none
+        a 
+          font-size: 14px 
+          letter-spacing: 2px 
+          text-transform: uppercase
+          text-decoration: none
+          color: #a1a1a1
+          &:hover 
+            span 
+              text-decoration: underline
+
+    .footer-text
+      .footer-title
+        font-size: 25px 
+        letter-spacing: 1px 
+        font-weight: 300
+        margin-bottom: 20px 
+      p:last-of-type 
+        margin-bottom: 20px 
+        line-height: 1.8
+        color: grey
+        a 
+          color: $color-primary
+    ul 
+      list-style: none
+      padding: 0
+      display: flex
+      flex-direction: row
+      li 
+        margin: 0
+        border-right: 1px solid grey
+        padding: 0 8px
+        a 
+          color: grey
+        &:first-of-type 
+          padding-left: 0!important 
+        &:last-of-type 
+          border: none!important 
