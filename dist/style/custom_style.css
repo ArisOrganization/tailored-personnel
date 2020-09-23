@@ -5656,6 +5656,124 @@ section.hero .hero-form .form-container form#hero-form-rf .form-button-container
   cursor: pointer;
 }
 
+section.hero {
+  background-image: url("/assets/img/hero-bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  padding-top: 90px;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+section.hero:before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.hero .hero-content {
+  min-height: calc(70vh - 100px);
+  display: flex;
+  align-items: flex-start;
+  color: white;
+  margin-top: 60px;
+}
+
+section.hero .hero-content h1 {
+  font-size: 4.1rem;
+  color: #af9a32;
+  font-weight: 700;
+}
+
+section.hero .hero-content h1 span {
+  font-weight: 400;
+  color: white;
+}
+
+section.hero .hero-content .tagline {
+  font-weight: 100;
+  font-size: 29px;
+  font-style: italic;
+}
+
+section.hero .hero-header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 60px;
+}
+
+section.hero .hero-header-content {
+  background-color: white;
+  margin-bottom: 5px;
+  padding: 30px 15px;
+  width: 100%;
+  border-top: 6px solid #af9a32;
+  border-radius: 5px;
+  box-shadow: 4px 5px 15px #af9a32a9, 0px 4px 4px #af9a32a9;
+}
+
+section.hero .hero-header-content h1 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 15px;
+}
+
+section.hero .hero-header-content p {
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+}
+
+section.hero .hero-header-content ul {
+  list-style: none;
+  padding: 0 0 10px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #af9a32;
+}
+
+section.hero .hero-header-content ul li {
+  margin-bottom: 15px;
+  width: 100%;
+  padding-left: 30px;
+  font-size: 18px;
+  position: relative;
+}
+
+section.hero .hero-header-content ul li::before {
+  position: absolute;
+  content: '';
+  background: url("/assets/icons/tick.svg");
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  left: 0;
+}
+
+section.hero .hero-header-content button {
+  display: block;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+section.hero .hero-header-content .title-container {
+  padding: 0 15px 25px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #af9a32;
+  text-align: center;
+}
+
 section.hero-slim {
   padding: 0;
   background-image: url("/assets/img/hero-bg.jpg");
