@@ -66,14 +66,8 @@
                             <div class='col-12 col-md-6'>
                                 <div class="hero-content">
                                     <div class="inner-hero-content">
-										<h1>
-											Are you an employer? 
-											<br />
-											<span>Market Leading Talent Acquisition</span> ONLY 8% Commission 
-										</h1>
-                                        <p class="tagline">
-                                        	We find you the best talent in your industry with a fully tailored service for your company.
-                                        </p>
+										<h1>Market Leading Talent Acquisition</h1>
+                                        <p class="tagline"> Find your next top employee</p>
                                     </div>
                                 </div>
                             </div> 

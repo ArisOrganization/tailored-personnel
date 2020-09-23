@@ -133,9 +133,7 @@
                                                         <input type="email" name="email"  class="required d8val_email valid"  id="email" placeholder="Your E-mail"/>
                                                         <!-- <input type="email" name="email" id="email" required placeholder="Your E-mail"/> -->
                                                     </fieldset> 
-
-
-                                              
+ 
                                                     <fieldset>
                                                         <label>Telephone:</label>
                                                         <input type="tel" name="telephone"  class="required d8val_inttelephone_mobile_line_opt" id="telephone" placeholder="Your Telephone Number"/>
