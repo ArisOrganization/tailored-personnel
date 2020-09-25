@@ -19,7 +19,7 @@
         // });
         // AOS.init();
         app.general_js.init();
-        // app.general_js.log_visitor();
+        app.general_js.log_visitor();
         app.loadscripts.init();
 
         if ($("#hero-form-alt").length) {
