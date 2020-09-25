@@ -6554,10 +6554,6 @@ section.hero .hero-header-content .title-container {
   opacity: 1;
 }
 
-.steps-form-container .steps-form .form-step.step-4 .form-fields fieldset {
-  margin-top: 10px;
-}
-
 .steps-form-container .steps-form .form-step button {
   display: block;
   padding: 15px 30px;
@@ -6622,7 +6618,7 @@ section.hero .hero-header-content .title-container {
 
 @media screen and (max-width: 769px) {
   .steps-form-container {
-    margin: 65px auto 0;
+    margin: 100px auto 0;
     padding: 0px 10px 15px 10px;
   }
   .steps-form-container h1 {
@@ -6673,6 +6669,9 @@ section.hero .hero-header-content .title-container {
 }
 
 @media screen and (max-width: 580px) {
+  .steps-form-container {
+    margin: 65px auto 0;
+  }
   .desktop-content {
     display: none !important;
   }
