@@ -91,7 +91,8 @@
 
           $(".cta.top-scroller").on("click", function (e) {
             e.preventDefault();
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            // $("html, body").animate({ scrollTop: 0 }, "slow");
+            document.location.href = "/steps";
           });
 
           $(".clients-slider").slick({
@@ -212,8 +213,6 @@
               data_8_validate.src =
                 "https://webservices.data-8.co.uk/javascript/jqueryvalidation_min.js";
               document.body.appendChild(data_8_validate);
-
-              console.log("data 8 loaded");
             }, 200);
           });
         },
@@ -573,7 +572,6 @@
             telephone: "",
           },
         },
-
         send_form: function send_form() {
           let payload = {
             method: "save_full_page_form",
@@ -616,7 +614,10 @@
                 _this.form_data.business[e.name] = e.value;
               }
             });
-            valid = data.every((el) => el.value !== "");
+            valid = data.every(
+              (el) => $(`#${el.name}`).hasClass("valid") && el.value !== ""
+            );
+
             if (valid) {
               _this.send_form();
             } else {
