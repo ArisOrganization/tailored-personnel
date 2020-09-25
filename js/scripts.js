@@ -19,16 +19,41 @@
         // });
         // AOS.init();
         app.general_js.init();
-        // app.loadscripts.init();
+        app.loadscripts.init();
         if ($("#hero-form-alt").length) {
           app.form_alt.init();
         } else if ($("#hero-form-rf").length) {
           app.form_recruit_first.init();
+        } else if ($("#hero-full-pageform").length) {
+          app.full_pageform.init();
         } else {
           app.form.init();
         }
       },
       general_js: {
+        // new javscript by Pedro
+
+        fadeOut: (targetParent, sibling) => {
+          targetParent.animate({ opacity: 0 }, 500, () => {
+            sibling.removeClass("d-none");
+            targetParent.addClass("d-none");
+            const progressBar = $(".steps-progress");
+            let completedStep = progressBar.find(".step-completed");
+
+            if (completedStep.length) {
+              completedStep.next().addClass("step-completed");
+              completedStep.next().next().addClass("current-step");
+            } else {
+              progressBar.children().eq(0).addClass("step-completed");
+              progressBar.children().eq(1).addClass("current-step");
+            }
+
+            sibling.animate({ opacity: 1 }, 500, () => {});
+          });
+        },
+
+        //------------------//
+
         init: function init() {
           if ($("[data-aos]").length) {
             //&& window.innerWidth > 580){
@@ -86,6 +111,26 @@
             ],
           });
 
+          // new javascript by Pedro
+
+          $(".next").on("click", (event) => {
+            event.preventDefault();
+            let targetParent = $(event.target.parentNode);
+            let sibling = targetParent.next();
+            let values = [];
+            targetParent.find("input").each(function () {
+              values.push($(this).val());
+            });
+            let valid = values.every((e) => e !== "");
+
+            if (valid) {
+              this.fadeOut(targetParent, sibling);
+            } else {
+              alert("Please fill all the fields and Try again");
+            }
+          });
+
+          ///-------------------//
           let ref =
             $("header").attr("data-referrer") == "empty"
               ? "direct"
@@ -153,10 +198,10 @@
             setTimeout(function () {
               // data-8 service - phone, email
               var data_8 = _this.build_script();
-
-              // data_8.src = "https://webservices.data-8.co.uk/javascript/loader.ashx?key=PJ7V-B47G-ZWCT-WKY9&load=InternationalTelephoneValidation,EmailValidation" // localhost
-              data_8.src =
-                "https://webservices.data-8.co.uk/javascript/loader.ashx?key=K3UB-54SM-JD5E-EX5P&load=InternationalTelephoneValidation,EmailValidation"; // live
+                data_8.src =
+                  "https://webservices.data-8.co.uk/javascript/loader.ashx?key=" +
+                  api_key +
+                  "&load=InternationalTelephoneValidation,EmailValidation"; // live
               document.body.appendChild(data_8);
 
               // data-8 jquery validation
@@ -507,6 +552,64 @@
             (_this.form_data.business.salary = $("#salary").val().length
               ? $("#salary").val()
               : "empty");
+        },
+      },
+      full_pageform: {
+        lead_id: "",
+        form_data: {
+          business: {
+            company: "",
+            industry: "",
+            location: "",
+            role: "",
+            salary: "",
+          },
+          lead: {
+            name: "",
+            email: "",
+            telephone: "",
+            url: "",
+          },
+        },
+
+        send_form: function send_form() {
+          let payload = {
+            method: "save_full_page_form",
+            data: this.form_data,
+          };
+
+          app.db_req.send(payload, false).then((res) => {
+            if (res.success) {
+              document.location.href = "/details-received";
+            } else {
+              alert("Error in the server");
+            }
+          });
+        },
+        init: function init() {
+          let _this = this;
+          $(".form-submit").on("click", (e) => {
+            let valid;
+            let data = $("#hero-full-pageform").serializeArray();
+            e.preventDefault();
+            data.forEach((e) => {
+              if (
+                e.name === "name" ||
+                e.name === "email" ||
+                e.name === "telephone"
+              ) {
+                _this.form_data.lead[e.name] = e.value;
+              } else {
+                _this.form_data.business[e.name] = e.value;
+              }
+            });
+            valid = data.every((el) => el.value !== "");
+            if (valid) {
+              _this.send_form();
+            } else {
+              alert("Please fill all the fields and try again.");
+            }
+          });
         },
       },
       checkCookie: function checkCookie(cname) {
