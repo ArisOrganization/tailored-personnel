@@ -7,7 +7,7 @@ ini_set('display_errors', 'On');
 ini_set('memory_limit', '-1');
 error_reporting(1); 
 
-// require __DIR__ . '/vendor/autoload.php';
+require 'vendor/autoload.php';
 foreach (glob("inc/*.php") as $filename) {  
     include $filename; 
 } 
@@ -18,7 +18,9 @@ $data;
 $jsonLogic = new logic();
 
 // $lead_email = "james@opopmedia.co.uk"; // testx
-$lead_email = "david.taylor@tailored-personnel.com";
+$lead_email = "pedro@opopmedia.co.uk"; // testx
+
+// $lead_email = "david.taylor@tailored-personnel.com";
 
 
 if ($contentType === "application/json") {
@@ -38,6 +40,35 @@ if ($contentType === "application/json") {
 } 
 
 switch($method){ 
+
+    case 'save_full_page_form':
+           session_start();  
+            $result_arr = array("success" => true); 
+
+            $lead = new lead();  
+
+            $saved = $lead->save_full_page($data);
+
+            if ($saved) {
+                $_SESSION["enquiry_id"] = $saved;
+                $waypoint_result = $lead->write_to_waypoint($data->lead, $data->business);
+                $result_arr["waypoint"] = $waypoint_result == "ACCEPTED";
+                $result_arr["success"] = true;
+                $_SESSION["name"]  = $data->lead->name;
+                $_SESSION["email"]  = $data->lead->email;
+                $_SESSION["telephone"]  = $data->lead->telephone;
+                
+                $logic = new logic();
+                $logic->send_mail($lead_email, $data->business, "followup" );
+                $logic->send_mail($data->lead->email, $data->lead, "thankyou" );
+                  
+            } else {
+                $result_arr["success"] = false;
+            }
+            
+        
+        echo json_encode($result_arr);
+        break;
 
     case "all_data_form":
         session_start();  
