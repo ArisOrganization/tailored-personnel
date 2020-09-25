@@ -158,7 +158,7 @@
                       </fieldset>
                       <fieldset>
                         <label>Contact Number</label>
-                        <input class="required d8val_inttelephone_mobile_line_opt" type="text" name="telephone"
+                        <input class="required d8val_inttelephone_mobile_line_opt" type="tel" name="telephone"
                           id="telephone" placeholder="Your Telephone Number">
                       </fieldset>
 
