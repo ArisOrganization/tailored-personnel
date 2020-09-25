@@ -6441,9 +6441,8 @@ section.hero .hero-header-content .title-container {
 
 .steps-form-container h1 {
   line-height: 1;
-  font-size: 35px;
+  font-size: 28px;
   text-transform: capitalize;
-  margin-bottom: 35px;
   text-align: center;
 }
 
@@ -6453,7 +6452,7 @@ section.hero .hero-header-content .title-container {
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
-  margin: 40px 0;
+  margin: 25px 0;
 }
 
 .steps-form-container .steps-progress .single-step {
@@ -6602,6 +6601,18 @@ section.hero .hero-header-content .title-container {
   border: 2px solid #af9a32;
   padding: 5px;
   text-transform: capitalize;
+}
+
+.steps-form-container .steps-form .step-4 p:first-of-type {
+  font-size: 18px;
+}
+
+.steps-form-container .steps-form .step-4 p {
+  font-size: 14px;
+}
+
+.steps-form-container .steps-form .step-4 fieldset {
+  margin-top: 10px;
 }
 
 @keyframes grow {
