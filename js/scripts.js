@@ -580,6 +580,7 @@
           };
 
           app.db_req.send(payload, false).then((res) => {
+            console.log(res);
             if (res.success) {
               document.location.href = "/details-received";
             } else {
