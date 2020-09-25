@@ -5,7 +5,7 @@
     padding: 15px 10px
 
     &-inner
-      padding: 30px 15px
+      padding: 30px 15px 0px 15px
     h1
       line-height: 1
       font-size: 35px
@@ -28,6 +28,17 @@
         justify-content: center
         align-items: center
 
+        &.current-step
+          p
+            color: $color-primary
+
+          .step-number
+            background: rgb(0,0,0)
+            background: $color-primary
+            animation: grow 0.5s ease-in-out .25s
+            p
+              color: white
+
         &.step-completed
           p
             color: $color-primary
@@ -37,7 +48,7 @@
 
           .step-number
             background: rgb(0,0,0)
-            background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(175,154,50,1) 100%)
+            background: $color-primary
             p
               color: white
 
@@ -57,7 +68,7 @@
           position: absolute
           height: 5px
           background: rgb(0,0,0)
-          background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(175,154,50,1) 100%)
+          background: $color-primary
           top: 28px
           left: 50%
           z-index: -1
@@ -76,22 +87,37 @@
           height: 60px
           width: 60px
           background-color: #f2f4f8
+          transition: all 0.5s
 
           p
-            color: $color-primary
             font-size: 34px
             padding: 0
 
     .steps-form
       .form-step
         opacity: 0
-        transition: all 1s
 
-        button
+        &.d-none
+          display: none !important
 
         &.step-current
           opacity: 1
-          // display: block
+
+        &.step-4
+          .form-fields
+            fieldset
+              margin-top: 10px
+
+        button
+          display: block
+          padding: 15px 30px
+          text-transform: uppercase
+          font-size: 20px
+          margin: 0 auto
+          text-align: center
+          text-decoration: none
+          margin-top: 25px
+          width: 100%
 
       .step-title
         text-align: center
@@ -99,25 +125,20 @@
         p:first-of-type
           font-size: 20px
           font-weight: 700
-
+          padding-bottom: 15px
         p
           font-weight: 300
-          font-size: 15px
-          padding-bottom: 15px
+          font-size: 16px
 
       .form-fields
-
         fieldset
           display: flex
           flex-direction: column
           margin-top: 25px
           border: none
-          border-bottom: 2px solid $color-primary
-          background: $color-primary
-          border-radius: 5px
 
           label
-            padding: 5px
+            padding-bottom: 5px
             font-size: 20px
 
           input
@@ -125,8 +146,15 @@
             border: none
             font-size: 24px
             font-weight: 300
-            outline: none
+            outline: $color-primary
+            border: 2px solid $color-primary
             padding: 5px
-            text-transform: uppercase
-            &::placeholder
-              text-transform: capitalize
+            text-transform: capitalize
+
+  @keyframes grow
+    0%
+      transform: scale(1)
+    50%
+      transform: scale(1.45)
+    100%
+      transform: scale(1)
