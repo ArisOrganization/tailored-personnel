@@ -6,8 +6,6 @@ namespace project;
 
 class lead{
 
-
-
     function write_to_waypoint($lead, $business){
 
         $param_string = "";
@@ -126,7 +124,6 @@ class lead{
                 location,
                 role,
                 salary,  
-                url, 
                 readable_date, 
                 unix_date, 
                 ip  
@@ -141,7 +138,6 @@ class lead{
                 :location,
                 :role,
                 :salary,
-                :url, 
                 :readable_date, 
                 :unix_date, 
                 :ip   )"
@@ -154,7 +150,6 @@ class lead{
         $stmt->bindValue(":location", $data->business->location);   
         $stmt->bindValue(":role", $data->business->role);   
         $stmt->bindValue(":salary", $data->business->salary);   
-        $stmt->bindValue(":url", $data->lead->url);
         $stmt->bindValue(":readable_date", $date);  
         $stmt->bindValue(":unix_date", $unix_date);  
         $stmt->bindValue(":ip", $ip);  
