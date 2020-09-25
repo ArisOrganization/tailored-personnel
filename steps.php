@@ -55,7 +55,7 @@
                 <div class="steps-form-container-inner">
                   <h1>Complete four simple steps to find your next top employee.</h1>
                   <div class="steps-progress">
-                    <div class="single-step step-completed">
+                    <div class="single-step current-step">
                       <div class="step-number">
                         <p>1</p>
                       </div>
@@ -82,32 +82,89 @@
                   </div>
                 </div>
 
-                <form class='steps-form'>
+                <form class='steps-form' id='hero-full-pageform'>
                   <div class="form-step step-1 step-current ">
                     <div class="step-title">
-                      <p>Step 1 - Role You are recruiting for</p>
+                      <p>Step 1 - What role are you recruiting for?</p>
                       <p class="step-req">
                         Please provide information regarding the position your company is recruiting for.
                       </p>
                     </div>
                     <div class="form-fields">
                       <fieldset>
-                        <label>Sector:</label>
-                        <input type="text" name="sector" id="sector" placeholder="Business Sector">
+                        <label for='industry'>What business sector are you in?</label>
+                        <input type="text" name="industry" id="industry" placeholder="Example: Digital Marketing">
                       </fieldset>
                       <fieldset>
-                        <label>Role Title:</label>
-                        <input type="text" name="role" id="role" placeholder="Position / Role">
+                        <label for='role'>What position/role do you need to fill?</label>
+                        <input type="text" name="role" id="role" placeholder='Example: Facebook marketer'>
                       </fieldset>
                     </div>
-                    <button class="cta cta-primary">NEXT</button>
+                    <button class="next cta cta-primary">NEXT</button>
                   </div>
+                  <div class="form-step step-2 d-none ">
+                    <div class="step-title">
+                      <p>Step 2 - What Salary are you offering?</p>
+                      <p class="step-req">
+                        Please provide information regarding the position your company is recruiting for.
+                      </p>
+                    </div>
+                    <div class="form-fields">
+                      <fieldset>
+                        <label for='salary'>Salary you are offering?</label>
+                        <input type="text" name="salary" id="salary" placeholder="Example: £25,000 - £30,000">
+                      </fieldset>
 
-
-                  <div class="form-button-container submit-container " style="display: none">
-                    <button class="form-button form-submit">Find Top Talent Now </button>
+                    </div>
+                    <button class="next cta cta-primary">NEXT</button>
                   </div>
-                </form>
+                  <div class="form-step step-3 d-none ">
+                    <div class="step-title">
+                      <p>Step 3 - Where is your business located?</p>
+                      <p class="step-req">
+                        Please provide information regarding the position your company is recruiting for.
+                      </p>
+                    </div>
+                    <div class="form-fields">
+                      <fieldset>
+                        <label for='location'>Where is your company office located?</label>
+                        <input type="text" name="location" id="location"
+                          placeholder='Example: Manchester UK / Work from home'>
+                      </fieldset>
+                    </div>
+                    <button class="next cta cta-primary">NEXT</button>
+                  </div>
+                  <div class="form-step step-4 step-current d-none">
+                    <!--  -->
+                    <div class="step-title">
+                      <p>Step 4 - Please provide your contact information.</p>
+                      <p class="step-req">
+                        Please provide information regarding the position your company is recruiting for.
+                      </p>
+                    </div>
+                    <div class="form-fields">
+                      <fieldset>
+                        <label>Name</label>
+                        <input type="text" name="name" id="name" placeholder='Your Name'>
+                      </fieldset>
+                      <fieldset>
+                        <label>Company Name</label>
+                        <input type="text" name="company" id="company" placeholder='Company'>
+                      </fieldset>
+                      <fieldset>
+                        <label>Email</label>
+                        <input class='required d8val_email' type="text" name="email" id="email"
+                          placeholder='your E-mail'>
+                      </fieldset>
+                      <fieldset>
+                        <label>Contact Number</label>
+                        <input class="required d8val_inttelephone_mobile_line_opt" type="text" name="telephone"
+                          id="telephone" placeholder="Your Telephone Number">
+                      </fieldset>
+
+                    </div>
+                    <button class="cta cta-primary form-submit">Find Top Talent Now </button>
+                  </div>
               </div>
             </div>
           </div>
