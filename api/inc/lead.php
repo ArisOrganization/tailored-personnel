@@ -114,7 +114,7 @@ class lead{
 
         $db = new db;
         $stmt = $db->db->prepare("
-            INSERT INTO  leads 
+            INSERT INTO  taylor_enquires 
             (
                 name, 
                 email, 
