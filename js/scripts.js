@@ -19,7 +19,9 @@
         // });
         // AOS.init();
         app.general_js.init();
+        // app.general_js.log_visitor();
         app.loadscripts.init();
+
         if ($("#hero-form-alt").length) {
           app.form_alt.init();
         } else if ($("#hero-form-rf").length) {
@@ -129,7 +131,8 @@
               alert("Please fill all the fields and Try again");
             }
           });
-
+        },
+        log_visitor: function log_visitor() {
           ///-------------------//
           let ref =
             $("header").attr("data-referrer") == "empty"
@@ -198,10 +201,10 @@
             setTimeout(function () {
               // data-8 service - phone, email
               var data_8 = _this.build_script();
-                data_8.src =
-                  "https://webservices.data-8.co.uk/javascript/loader.ashx?key=" +
-                  api_key +
-                  "&load=InternationalTelephoneValidation,EmailValidation"; // live
+              data_8.src =
+                "https://webservices.data-8.co.uk/javascript/loader.ashx?key=" +
+                api_key +
+                "&load=InternationalTelephoneValidation,EmailValidation"; // live
               document.body.appendChild(data_8);
 
               // data-8 jquery validation
@@ -210,7 +213,7 @@
                 "https://webservices.data-8.co.uk/javascript/jqueryvalidation_min.js";
               document.body.appendChild(data_8_validate);
 
-              // console.log("data 8 loaded")
+              console.log("data 8 loaded");
             }, 200);
           });
         },
@@ -568,7 +571,6 @@
             name: "",
             email: "",
             telephone: "",
-            url: "",
           },
         },
 
@@ -576,6 +578,7 @@
           let payload = {
             method: "save_full_page_form",
             data: this.form_data,
+            token,
           };
 
           app.db_req.send(payload, false).then((res) => {
@@ -588,6 +591,16 @@
         },
         init: function init() {
           let _this = this;
+          $("form#hero-full-pageform").validate({
+            rules: {
+              telephone: {
+                required: "Telephone number is required",
+                d8val_inttelephone_opt: [
+                  { name: "RequiredCountry", value: "GB" },
+                ],
+              },
+            },
+          });
           $(".form-submit").on("click", (e) => {
             let valid;
             let data = $("#hero-full-pageform").serializeArray();
