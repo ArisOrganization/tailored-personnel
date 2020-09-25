@@ -1,109 +1,160 @@
 // @media screen and (max-width: 1200px)  
 // @media screen and (max-width: 992px)  
-// @media screen and (max-width: 769px)
-@media screen and (max-width: 580px) 
+@media screen and (max-width: 769px)
+    .steps
+        &-form-container
+            margin: 65px auto 0
+            padding: 0px 10px 15px 10px
+            h1
+                font-size: 18px
+                margin-bottom: 15px
+            &-inner
+                padding: 5px
+
+            .step-req
+                display: none
+
+            .steps-progress
+                margin: 10px 0
+                .single-step
+                    &:not(:last-child):before
+                        top: 21px
+                    &:not(:last-child):after
+                        top: 21px
+
+                    .step-number
+                        height: 45px
+                        width: 45px
+                        & ~ p
+                            display: none
+
+            .steps-form
+
+                .form-fields
+                    fieldset
+                        margin-top: 5px
+                        label
+                            font-size: 16px
+                        input
+                            font-size: 20px
+                .step-3
+                    fieldset
+                        input::placeholder
+                            font-size: 15px
+                .step-4
+                    .step-title
+                        p:first-of-type
+                            padding: 0
+
+                .step-title
+                    p:first-of-type
+                        font-size: 16px
+                        padding-bottom: 15px
+
+@media screen and (max-width: 580px)
+
     .desktop-content
         display: none!important
     .mobile-content
         display: block!important
     .bigger
         font-size: 23px
-    header 
-        .inner-header 
-            .header-logo-container 
+    header
+        .inner-header
+            .header-logo-container
                 img
                     max-height: 40px
-            .header-contact-container 
-                .inner-header-contact 
-                    p 
+            .header-contact-container
+                .inner-header-contact
+                    p
                         a
                             background-image: none
                             padding: 15px 0 0 0
                             font-size: 20px
     footer.footer
-        .footer-links 
-            ul 
+        .footer-links
+            ul
                 flex-direction: column
                 text-align: left
                 justify-content: flex-start
-                li  
+                li
                     padding: 0
                     border: none
                     margin-bottom: 10px
-        .footer-right 
-            flex-direction: column 
+        .footer-right
+            flex-direction: column
             height: 100%
             float: none
             align-items: flex-start
             margin-top: 30px
-            .footer-logo 
+            .footer-logo
                 margin-bottom: 10px
             p
                 text-align: center
                 width: 100%
     section
-        &.hero 
+        &.hero
             padding-top: 60px
-            .hero-content  
+            .hero-content
                 margin-top: 10px
                 min-height: 0
-                h1 
+                h1
                     font-size: 25px
                     font-weight: 700
                     margin-bottom: 5px
-                .tagline 
+                .tagline
                     font-size: 19px
                     margin-bottom: 10px
-            .hero-form 
+            .hero-form
                 margin-top: 0
-                .form-step 
+                .form-step
                     padding: 15px
-                    .form-fields 
+                    .form-fields
                         fieldset fieldset
                             margin-top: 15px
                             input
                                 font-size: 16px
                 .form-button-container
                     height: 60px
-                    button 
+                    button
                         font-size: 20px
 
-            .form-title-content 
+            .form-title-content
                 display: none
-        &.process 
-            .inner-process 
+        &.process
+            .inner-process
                 flex-direction: column
-                > div 
+                > div
                     width: 100%
                     padding-bottom: 60px
-                    &:after  
+                    &:after
                         left: 50%
                         transform: translateX(-50%) rotate(90deg)
                         top: calc(100% - 40px)
         &.clients
-            .inner-clients 
-                .clients-title  
+            .inner-clients
+                .clients-title
                     width: 100%
                     text-align: center
-                    height: 110px 
-                    p 
+                    height: 110px
+                    p
                         width: 100%
                 .slick-slider
                     padding-top: 70px
-        &.choosing 
-            .chose-content 
+        &.choosing
+            .chose-content
                 .inner-chose-content
-                    &:before 
+                    &:before
                         transform: rotate(45deg) scale(2.4)
-        &.roles 
+        &.roles
             border-bottom: none
-            padding: 0 
+            padding: 0
             &:before
                 top: 0
-            .roles-content 
+            .roles-content
                 padding: 20px 0px
-                h3 
-                    margin: 20px 0 
+                h3
+                    margin: 20px 0
             .image-container
                 transform: none
                 > div
@@ -111,12 +162,12 @@
                     // transform: none!important
         &.half-half-section
             padding: 50px 0
-            .half-content 
-                .inner-prep-content 
+            .half-content
+                .inner-prep-content
                     padding: 30px 15px
-                    ul  
+                    ul
                         flex-direction: column
-                        li 
+                        li
                             width: 100%
         &.prep-form
             margin-top: 0
@@ -129,14 +180,57 @@
 
 @media screen and (max-width: 480px)
     .extra-header
-        p 
-            a 
+        p
+            a
                 font-size: 14px
-                
-    section    
-        &.hero 
-            .hero-content   
-                h1 
+
+    section
+        &.hero
+            .hero-header
+                margin-top: 0
+                &-content
+                    padding: 15px
+
+                    a
+                        font-size: 14px
+                    p
+                        font-size: 21px
+                    h1
+                        font-size: 29px
+
+                    ul li
+                        font-size: 16px
+
+            .hero-content
+                h1
                     font-size: 23px
+    .steps
+        &-form-container
+            .steps-progress
+                margin: 10px 0
+                .single-step
+                    &:not(:last-child):before
+                        top: 21px
+                    &:not(:last-child):after
+                        top: 21px
+
+                    .step-number
+                        height: 45px
+                        width: 45px
+                        & ~ p
+                            display: none
+            .steps-form
+                .form-fields
+                    fieldset
+                        margin-top: 5px
+                        label
+                            padding-bottom: 2px
+                            font-size: 12px
+                        input
+                            font-size: 16px
+
+    // new css styles by Pedro
+
+    //---------//
 // @media screen and (max-width: 375px)
 // @media screen and (max-width: 321px)
