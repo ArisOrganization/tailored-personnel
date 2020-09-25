@@ -5,6 +5,7 @@ namespace project;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP; 
+use Mailgun\Mailgun;
 
 require __DIR__ . '/../php_mailer/Exception.php';
 require __DIR__ . '/../php_mailer/PHPMailer.php';
@@ -38,11 +39,96 @@ class logic {
         return (json_last_error()===JSON_ERROR_NONE);
     } 
 
-
-
-
-
     function send_mail($email, $data, $email_type){
+        
+        $message =  "";
+
+        if($email_type == "lead") { 
+            $message =  "New Enquiry Received: " .  
+                        "<br />".  
+                        "<br />".
+                        "Name: " .$data->name .
+                        "<br />".  
+                        "<br />".
+                        "Email: " .$data->email.
+                        "<br />".  
+                        "<br />".
+                        "Telephone: " .$data->telephone; 
+
+        }elseif($email_type == "followup"){
+            $message =  "New Follow up form completed: " .  
+                        "<br />".  
+                        "<br />". 
+                        "Name: " .$_SESSION["name"] .
+                        "<br />".  
+                        "<br />".
+                        "Email: " .$_SESSION["email"] .
+                        "<br />".  
+                        "<br />".
+                        "Telephone: " .$_SESSION["telephone"] .
+                        "<br />".  
+                        "<br />".
+                        "Role: " .$data->role .
+                        "<br />".  
+                        "<br />".
+                        "Company: " .$data->company .
+                        "<br />".  
+                        "<br />".
+                        "Industry: " .$data->industry .
+                        "<br />".  
+                        "<br />".
+                        "Location: " .$data->location .
+                        "<br />".  
+                        "<br />".
+                        "Salary: " .$data->salary ;
+
+        }else{ 
+            $message =  "Dear " . $data->name  . ",".
+                        "<br />".  
+                        "<br />".
+                        "Thank you for your enquiry, our team at Tailored Personnel will be in touch as soon as possible to discuss your recruitment needs. " .
+                        
+                        "<br />".  
+                        "<br />".
+                        "Kind Regards" . 
+                        "<br />".
+                        "Tailored Personnel Team";
+        }
+
+
+
+        $fromEmail =    'enquiries@tailored-personnel.com';
+        $from =         'Tailored Personnel';  
+        $sendToEmail =  $email;
+        $sendTo =       $email_type == "followup" || $email_type == "lead" ? "David" :  $data->name ;
+        $subject =      $email_type == "followup" || $email_type == "lead" ? 'Tailored Personnel Enquiry' :  "Thank you from Tailored Personnel";   
+        
+        $params = array(
+            'from'  => $from . ' <'. $fromEmail .'>',
+            'to'    => $sendToEmail,
+            'subject' => $subject,
+            'text' => $message,
+            'html' => $message
+        );
+
+          # Instantiate the client.
+        $mgClient = Mailgun::create('6f84a2c33deb51f7698951fffeda4c6b-d5e69b0b-b4f59f00', 'https://api.eu.mailgun.net/v3');
+        $domain = "mailer.opopmedia.co.uk";
+        # Make the call to the client.
+        $res = $mgClient->messages()->send($domain, $params);
+        if($res->getMessage() == "Queued. Thank you."){
+            return  array('success' => true, 'message' =>  "Message Sent");
+        }else{
+            return array('type' => 'false', 'message' =>  "Message error");
+        }
+        
+        
+    }
+
+
+
+
+    function send_SMTP_mail($email, $data, $email_type){
         
         $message =  "";
 
