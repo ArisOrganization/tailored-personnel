@@ -103,11 +103,6 @@
         &.step-current
           opacity: 1
 
-        &.step-4
-          .form-fields
-            fieldset
-              margin-top: 10px
-
         button
           display: block
           padding: 15px 30px
@@ -150,6 +145,10 @@
             border: 2px solid $color-primary
             padding: 5px
             text-transform: capitalize
+
+  // select all labels with errors from DATA8
+        label[id$="-error" i]
+          color: red
 
   @keyframes grow
     0%
