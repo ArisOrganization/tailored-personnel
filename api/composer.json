@@ -1,0 +1,9 @@
+{
+    "require": {
+        "mailgun/mailgun-php": "dev-master",
+        "php-http/guzzle6-adapter": "^2.0",
+        "php-http/message": "^1.9",
+        "php-http/curl-client": "^2.1",
+        "nyholm/psr7": "^1.3"
+    }
+}
