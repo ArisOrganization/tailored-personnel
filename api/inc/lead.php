@@ -6,8 +6,6 @@ namespace project;
 
 class lead{
 
-
-
     function write_to_waypoint($lead, $business){
 
         $param_string = "";
@@ -107,6 +105,64 @@ class lead{
             $db = null;
             return false;
         }  
+    }
+
+    public function save_full_page($data){
+        $date = date("d-m-Y H:i A");
+        $unix_date = time();
+        $ip= $_SERVER['REMOTE_ADDR'];
+
+        $db = new db;
+        $stmt = $db->db->prepare("
+            INSERT INTO  taylor_enquires 
+            (
+                name, 
+                email, 
+                telephone,
+                company,
+                industry,
+                location,
+                role,
+                salary,  
+                readable_date, 
+                unix_date, 
+                ip  
+            ) 
+            VALUES 
+            (
+                :name, 
+                :email, 
+                :telephone,
+                :company,
+                :industry,
+                :location,
+                :role,
+                :salary,
+                :readable_date, 
+                :unix_date, 
+                :ip   )"
+        );
+        $stmt->bindValue(":name", $data->lead->name);
+        $stmt->bindValue(":email", $data->lead->email); 
+        $stmt->bindValue(":telephone", $data->lead->telephone);   
+        $stmt->bindValue(":company", $data->business->company);
+        $stmt->bindValue(":industry", $data->business->industry); 
+        $stmt->bindValue(":location", $data->business->location);   
+        $stmt->bindValue(":role", $data->business->role);   
+        $stmt->bindValue(":salary", $data->business->salary);   
+        $stmt->bindValue(":readable_date", $date);  
+        $stmt->bindValue(":unix_date", $unix_date);  
+        $stmt->bindValue(":ip", $ip);  
+         
+        $checkResult = $stmt->execute();
+        $lastid = $db->getLast();
+        if($checkResult){  
+            $db = null;
+            return $lastid;
+        }else{            
+            $db = null;
+            return false;
+        } 
     }
        
 

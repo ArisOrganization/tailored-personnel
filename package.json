@@ -4,6 +4,7 @@
   "description": "Tailored Personnel Website",
   "main": "gulpfile.js",
   "scripts": {
+    "build-watch": "node ./node_modules/.bin/gulp watch",
     "build-development": "NODE_ENV='development' node ./node_modules/.bin/gulp",
     "build-production": "NODE_ENV='production' node ./node_modules/.bin/gulp",
     "build-package": "NODE_ENV='package' node ./node_modules/.bin/gulp package",

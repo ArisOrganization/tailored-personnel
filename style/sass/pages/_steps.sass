@@ -1,0 +1,167 @@
+.steps
+  &-form-container
+    margin: 90px auto 0
+    // background-color: blue
+    padding: 15px 10px
+
+    &-inner
+      padding: 30px 15px 0px 15px
+    h1
+      line-height: 1
+      font-size: 28px
+      text-transform: capitalize
+      text-align: center
+    .steps-progress
+      width: 100%
+      display: flex
+      align-items: flex-start
+      flex-direction: row
+      justify-content: space-between
+      margin: 25px 0
+
+      .single-step
+        position: relative
+        width: 25%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        &.current-step
+          p
+            color: $color-primary
+
+          .step-number
+            background: rgb(0,0,0)
+            background: $color-primary
+            animation: grow 0.5s ease-in-out .25s
+            p
+              color: white
+
+        &.step-completed
+          p
+            color: $color-primary
+
+          &::after
+            width: 100% !important
+
+          .step-number
+            background: rgb(0,0,0)
+            background: $color-primary
+            p
+              color: white
+
+        &:not(:last-child):before
+          content: ""
+          width: 100%
+          position: absolute
+          height: 5px
+          background-color: #f1f4f8
+          top: 28px
+          left: 50%
+          z-index: -1
+
+        &:not(:last-child):after
+          content: ""
+          width: 0
+          position: absolute
+          height: 5px
+          background: rgb(0,0,0)
+          background: $color-primary
+          top: 28px
+          left: 50%
+          z-index: -1
+          transition: all .5s
+
+        p
+          font-size: 20px
+          padding-top: 5px
+
+        .step-number
+          margin: 0 auto
+          display: flex
+          align-items: center
+          justify-content: center
+          border-radius: 50%
+          height: 60px
+          width: 60px
+          background-color: #f2f4f8
+          transition: all 0.5s
+
+          p
+            font-size: 34px
+            padding: 0
+
+    .steps-form
+      .form-step
+        opacity: 0
+
+        &.d-none
+          display: none !important
+
+        &.step-current
+          opacity: 1
+
+        button
+          display: block
+          padding: 15px 30px
+          text-transform: uppercase
+          font-size: 20px
+          margin: 0 auto
+          text-align: center
+          text-decoration: none
+          margin-top: 25px
+          width: 100%
+
+      .step-title
+        text-align: center
+
+        p:first-of-type
+          font-size: 20px
+          font-weight: 700
+          padding-bottom: 15px
+        p
+          font-weight: 300
+          font-size: 16px
+
+      .form-fields
+        fieldset
+          display: flex
+          flex-direction: column
+          margin-top: 25px
+          border: none
+
+          label
+            padding-bottom: 5px
+            font-size: 20px
+
+          input
+            width: 100%
+            border: none
+            font-size: 24px
+            font-weight: 300
+            outline: $color-primary
+            border: 2px solid $color-primary
+            padding: 5px
+            text-transform: capitalize
+
+      .step-4
+        p:first-of-type
+          font-size: 18px
+        p
+          font-size: 14px
+        fieldset
+          margin-top: 10px
+
+
+  // select all labels with errors from DATA8
+        label[id$="-error" i]
+          color: red
+
+  @keyframes grow
+    0%
+      transform: scale(1)
+    50%
+      transform: scale(1.45)
+    100%
+      transform: scale(1)
