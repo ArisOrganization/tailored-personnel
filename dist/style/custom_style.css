@@ -6373,6 +6373,7 @@ section.hero .hero-header-content {
   border-top: 6px solid #af9a32;
   border-radius: 5px;
   box-shadow: 4px 5px 15px #af9a32a9, 0px 4px 4px #af9a32a9;
+  max-width: 500px;
 }
 
 section.hero .hero-header-content h1 {
@@ -6570,7 +6571,7 @@ section.hero .hero-header-content .title-container {
 }
 
 .steps-form-container .steps-form .step-title p:first-of-type {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   padding-bottom: 15px;
 }
@@ -6603,16 +6604,16 @@ section.hero .hero-header-content .title-container {
   text-transform: capitalize;
 }
 
-.steps-form-container .steps-form .step-4 p:first-of-type {
-  font-size: 18px;
-}
-
 .steps-form-container .steps-form .step-4 p {
   font-size: 14px;
 }
 
 .steps-form-container .steps-form .step-4 fieldset {
   margin-top: 10px;
+}
+
+.steps-form-container .steps-form .step-4 label.error {
+  color: red !important;
 }
 
 @keyframes grow {
