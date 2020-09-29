@@ -118,6 +118,7 @@
 
           $(".next").on("click", (event) => {
             event.preventDefault();
+
             let targetParent = $(event.target.parentNode);
             let sibling = targetParent.next();
             let values = [];
@@ -128,6 +129,7 @@
 
             if (valid) {
               this.fadeOut(targetParent, sibling);
+              event.target.disabled = true;
             } else {
               alert("Please fill all the fields and Try again");
             }
