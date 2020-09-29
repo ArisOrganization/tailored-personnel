@@ -117,7 +117,7 @@
         text-align: center
 
         p:first-of-type
-          font-size: 20px
+          font-size: 30px
           font-weight: 700
           padding-bottom: 15px
         p
@@ -146,17 +146,15 @@
             text-transform: capitalize
 
       .step-4
-        p:first-of-type
-          font-size: 18px
+        // p:first-of-type
+        //   font-size: 18px
         p
           font-size: 14px
         fieldset
           margin-top: 10px
 
-
-  // select all labels with errors from DATA8
-        label[id$="-error" i]
-          color: red
+        label.error
+          color: red !important
 
   @keyframes grow
     0%
