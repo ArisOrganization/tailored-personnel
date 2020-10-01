@@ -6523,6 +6523,7 @@ section.hero .hero-header-content .title-container {
 .steps-form-container .steps-progress .single-step p {
   font-size: 20px;
   padding-top: 5px;
+  text-align: center;
 }
 
 .steps-form-container .steps-progress .single-step .step-number {
@@ -6631,7 +6632,7 @@ section.hero .hero-header-content .title-container {
 @media screen and (max-width: 769px) {
   .steps-form-container {
     margin: 100px auto 0;
-    padding: 0px 10px 15px 10px;
+    padding: 30px 10px 0px 10px;
   }
   .steps-form-container h1 {
     font-size: 18px;
@@ -6652,18 +6653,11 @@ section.hero .hero-header-content .title-container {
   .steps-form-container .steps-progress .single-step:not(:last-child):after {
     top: 21px;
   }
-  .steps-form-container .steps-progress .single-step .step-number {
-    height: 45px;
-    width: 45px;
-  }
-  .steps-form-container .steps-progress .single-step .step-number ~ p {
-    display: none;
-  }
   .steps-form-container .steps-form .form-fields fieldset {
-    margin-top: 5px;
+    margin-top: 15px;
   }
   .steps-form-container .steps-form .form-fields fieldset label {
-    font-size: 16px;
+    font-size: 18px;
   }
   .steps-form-container .steps-form .form-fields fieldset input {
     font-size: 20px;
@@ -6675,14 +6669,13 @@ section.hero .hero-header-content .title-container {
     padding: 0;
   }
   .steps-form-container .steps-form .step-title p:first-of-type {
-    font-size: 16px;
-    padding-bottom: 15px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 580px) {
   .steps-form-container {
-    margin: 65px auto 0;
+    margin: 60px auto 0;
   }
   .desktop-content {
     display: none !important;
@@ -6841,6 +6834,7 @@ section.hero .hero-header-content .title-container {
   }
   section.hero .hero-header-content {
     padding: 15px;
+    margin-top: 60px;
   }
   section.hero .hero-header-content a {
     font-size: 14px;
@@ -6873,14 +6867,57 @@ section.hero .hero-header-content .title-container {
   .steps-form-container .steps-progress .single-step .step-number ~ p {
     display: none;
   }
-  .steps-form-container .steps-form .form-fields fieldset {
+}
+
+@media screen and (max-width: 480px) and (max-height: 670px) {
+  section.hero {
+    padding-bottom: 30px;
+  }
+  section.hero .hero-header {
+    margin-top: 0;
+  }
+  section.hero .hero-header-content {
+    margin-top: 30px;
+  }
+  section.hero .hero-header-content a {
+    font-size: 14px;
+  }
+  section.hero .hero-header-content p {
+    font-size: 21px;
+  }
+  section.hero .hero-header-content h1 {
+    font-size: 29px;
+  }
+  section.hero .hero-header-content ul li {
+    font-size: 16px;
+  }
+  section.hero .hero-content h1 {
+    font-size: 23px;
+  }
+  .steps-form-container .steps-progress {
+    margin: 10px 0;
+  }
+  .steps-form-container .steps-progress .single-step:not(:last-child):before {
+    top: 21px;
+  }
+  .steps-form-container .steps-progress .single-step:not(:last-child):after {
+    top: 21px;
+  }
+  .steps-form-container .steps-progress .single-step .step-number {
+    height: 45px;
+    width: 45px;
+  }
+  .steps-form-container .steps-progress .single-step .step-number ~ p {
+    display: none;
+  }
+  .steps-form-container .steps-form .step-4 {
+    line-height: 1;
+  }
+  .steps-form-container .steps-form .step-4 .form-fields fieldset {
     margin-top: 5px;
   }
-  .steps-form-container .steps-form .form-fields fieldset label {
+  .steps-form-container .steps-form .step-4 .form-fields fieldset label {
     padding-bottom: 2px;
-    font-size: 12px;
-  }
-  .steps-form-container .steps-form .form-fields fieldset input {
     font-size: 16px;
   }
 }
