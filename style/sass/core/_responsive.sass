@@ -4,7 +4,7 @@
     .steps
         &-form-container
             margin: 100px auto 0
-            padding: 0px 10px 15px 10px
+            padding: 30px 10px 0px 10px
             h1
                 font-size: 18px
                 margin-bottom: 15px
@@ -22,19 +22,13 @@
                     &:not(:last-child):after
                         top: 21px
 
-                    .step-number
-                        height: 45px
-                        width: 45px
-                        & ~ p
-                            display: none
-
             .steps-form
 
                 .form-fields
                     fieldset
-                        margin-top: 5px
+                        margin-top: 15px
                         label
-                            font-size: 16px
+                            font-size: 18px
                         input
                             font-size: 20px
                 .step-3
@@ -48,14 +42,13 @@
 
                 .step-title
                     p:first-of-type
-                        font-size: 16px
-                        padding-bottom: 15px
+                        font-size: 20px
 
 @media screen and (max-width: 580px)
 
     .steps
         &-form-container
-            margin: 65px auto 0
+            margin: 60px auto 0
 
     .desktop-content
         display: none!important
@@ -194,6 +187,45 @@
                 margin-top: 0
                 &-content
                     padding: 15px
+                    margin-top: 60px
+
+                    a
+                        font-size: 14px
+                    p
+                        font-size: 21px
+                    h1
+                        font-size: 29px
+
+                    ul li
+                        font-size: 16px
+
+            .hero-content
+                h1
+                    font-size: 23px
+    .steps
+        &-form-container
+            .steps-progress
+                margin: 10px 0
+                .single-step
+                    &:not(:last-child):before
+                        top: 21px
+                    &:not(:last-child):after
+                        top: 21px
+
+                    .step-number
+                        height: 45px
+                        width: 45px
+                        & ~ p
+                            display: none
+
+@media screen and (max-width: 480px ) and (max-height: 670px)
+    section
+        &.hero
+            padding-bottom: 30px
+            .hero-header
+                margin-top: 0
+                &-content
+                    margin-top: 30px
 
                     a
                         font-size: 14px
@@ -224,17 +256,14 @@
                         & ~ p
                             display: none
             .steps-form
-                .form-fields
-                    fieldset
-                        margin-top: 5px
-                        label
-                            padding-bottom: 2px
-                            font-size: 12px
-                        input
-                            font-size: 16px
+                .step-4
+                    line-height: 1
+                    .form-fields
+                        fieldset
+                            margin-top: 5px
+                            label
+                                padding-bottom: 2px
+                                font-size: 16px
 
-    // new css styles by Pedro
-
-    //---------//
 // @media screen and (max-width: 375px)
 // @media screen and (max-width: 321px)
