@@ -130,6 +130,7 @@
             if (valid) {
               this.fadeOut(targetParent, sibling);
               event.target.disabled = true;
+              $("html, body").animate({ scrollTop: 0 }, "slow");
             } else {
               alert("Please fill all the fields and Try again");
             }
