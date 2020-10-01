@@ -6540,7 +6540,9 @@ section.hero .hero-header-content .title-container {
 
 .steps-form-container .steps-progress .single-step .step-number p {
   font-size: 34px;
+  font-size: 25px;
   padding: 0;
+  color: #535252;
 }
 
 .steps-form-container .steps-form .form-step {
@@ -6871,13 +6873,13 @@ section.hero .hero-header-content .title-container {
 
 @media screen and (max-width: 480px) and (max-height: 670px) {
   section.hero {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   section.hero .hero-header {
     margin-top: 0;
   }
   section.hero .hero-header-content {
-    margin-top: 30px;
+    margin-top: 20px;
   }
   section.hero .hero-header-content a {
     font-size: 14px;
