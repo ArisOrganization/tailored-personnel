@@ -157,6 +157,8 @@ function build_package(done) {
         './thankyou.php',
         './details-received.php',
         './employer-recruitment.php',
+        './recruit.php',
+        './steps.php',
         './recruitment-first.php',
         './employer-thankyou.php',
         './old_index.php',

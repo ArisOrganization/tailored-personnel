@@ -19,7 +19,7 @@
         // });
         // AOS.init();
         app.general_js.init();
-        app.general_js.log_visitor();
+        // app.general_js.log_visitor();
         app.loadscripts.init();
 
         if ($("#hero-form-alt").length) {
@@ -53,9 +53,7 @@
             sibling.animate({ opacity: 1 }, 500, () => {});
           });
         },
-
         //------------------//
-
         init: function init() {
           if ($("[data-aos]").length) {
             //&& window.innerWidth > 580){
@@ -586,7 +584,7 @@
             console.log(res);
             if (res.success) {
               document.location.href = "/details-received";
-            } else {
+            } else { 
               alert("Error in the server");
             }
           });

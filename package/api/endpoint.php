@@ -3,7 +3,11 @@
 namespace project;
 
 foreach (glob("inc/*.php") as $filename) { include $filename; }
-require '../vendor/autoload.php';
+
+
+require 'vendor/autoload.php';
+
+
 session_start();
 
 ini_set('display_errors', 'On');
@@ -14,6 +18,7 @@ $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) 
 $method;
 $data;
 $jsonLogic = new logic();
+
 // $lead_email = "pedro@opopmedia.co.uk"; // testx
 $lead_email = "david.taylor@tailored-personnel.com";
     
