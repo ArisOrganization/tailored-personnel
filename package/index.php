@@ -4,7 +4,6 @@
 <!doctype html>
 <html lang="en-GB" class="no-js">
 
-
 <head>
   <meta charset="UTF-8">
   <title>Tailored Personel</title>
@@ -43,6 +42,12 @@
 </head>
 
 <body class="body">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8XVZ8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
   <!-- header -->
   <?php include "partials/header.php" ?>
   <!-- /header -->
@@ -327,4 +332,3 @@
 </body>
 
 </html>
-
