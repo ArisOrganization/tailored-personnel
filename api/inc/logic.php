@@ -112,7 +112,7 @@ class logic {
         );
 
           # Instantiate the client.
-        $mgClient = Mailgun::create('d0dc5cf878157ad82f061ec29818e71a', 'https://api.eu.mailgun.net/v3');
+        $mgClient = Mailgun::create('key-457dfdf53592c8b42f1b655ae184aaa8', 'https://api.eu.mailgun.net/v3');
         $domain = "mailer.tailored-personnel.com";
         # Make the call to the client.
         $res = $mgClient->messages()->send($domain, $params);
