@@ -14,7 +14,7 @@ session_start();
 
     <style>
         .body-privacy {
-            margin-top: 80px;
+            margin-top: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
