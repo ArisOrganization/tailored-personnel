@@ -17,9 +17,9 @@
         <div class="footer-links">
           <ul>
             <!-- <li><a href="/terms">Terms and Conditions</a></li> -->
-            <li><a target="_blank" href="/docs/privacy.pdf">Privacy Policy</a></li>
-            <li><a target="_blank" href="/docs/cookies.pdf">Cookie Policy</a></li>
-            <li><a target="_blank" href="/docs/terms.pdf">Terms & Conditions</a></li>
+            <li><a target="_blank" href="/privacy.php">Privacy Policy</a></li>
+            <li><a target="_blank" href="/cookie.php">Cookie Policy</a></li>
+            <li><a target="_blank" href="/terms.php">Terms & Conditions</a></li>
           </ul>
         </div>
         <!-- <div> <p>Copyright Tailored Personnel © 2020</p> </div> -->
@@ -31,8 +31,7 @@
             <img src="/assets/img/logo.png" alt="Tailored Personnel Logo" />
           </div>
           <p>
-            <a href="https://opopmedia.co.uk">Developed by - <span class="black thin"><span
-                  class="thick">OPOP</span>Media</span></a>
+            <a href="https://opopmedia.co.uk">Developed by - <span class="black thin"><span class="thick">OPOP</span>Media</span></a>
           </p>
         </div>
 

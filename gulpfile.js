@@ -139,6 +139,9 @@ function build_package(done) {
       "./employer-thankyou.php",
       "./old_index.php",
       "./index.php",
+      "./terms.php",
+      "./cookie.php",
+      "./privacy.php",
     ])
     .pipe(gulp.dest("./package"));
 
