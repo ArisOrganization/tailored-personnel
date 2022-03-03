@@ -582,7 +582,7 @@
 
           app.db_req.send(payload, false).then((res) => {
             console.log(res);
-            if (res.success) {
+            if (res) {
               document.location.href = "/details-received";
             } else {
               alert("Error in the server");
