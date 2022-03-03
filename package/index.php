@@ -1,5 +1,5 @@
-<?php 
-    session_start();  
+<?php
+session_start();
 ?>
 <!doctype html>
 <html lang="en-GB" class="no-js">
@@ -12,41 +12,39 @@
 
   <!-- Facebook Pixel Code -->
   <script>
-  ! function(f, b, e, v, n, t, s) {
-    if (f.fbq) return;
-    n = f.fbq = function() {
-      n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-    };
-    if (!f._fbq) f._fbq = n;
-    n.push = n;
-    n.loaded = !0;
-    n.version = '2.0';
-    n.queue = [];
-    t = b.createElement(e);
-    t.async = !0;
-    t.src = v;
-    s = b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s)
-  }(window, document, 'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '212428966840264');
-  fbq('track', 'PageView');
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '212428966840264');
+    fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=212428966840264&ev=PageView&noscript=1" /></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=212428966840264&ev=PageView&noscript=1" /></noscript>
   <!-- End Facebook Pixel Code -->
   <script>
-  fbq('track', 'ViewContent');
+    fbq('track', 'ViewContent');
   </script>
 </head>
 
 <body class="body">
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8XVZ8"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8XVZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- header -->
   <?php include "partials/header.php" ?>
@@ -71,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li>Don’t pay any fees until we find you a new employee</li>
                   </ul>
 
-                  <a href='/steps' class="cta cta-primary ">Find Your Next Employee Now</a>
+                  <a href='/steps.php' class="cta cta-primary ">Find Your Next Employee Now</a>
                 </div>
               </div>
             </div>

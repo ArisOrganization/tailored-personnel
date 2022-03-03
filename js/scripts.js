@@ -90,7 +90,7 @@
           $(".cta.top-scroller").on("click", function (e) {
             e.preventDefault();
             // $("html, body").animate({ scrollTop: 0 }, "slow");
-            document.location.href = "/steps";
+            document.location.href = "/steps.php";
           });
 
           $(".clients-slider").slick({
@@ -584,7 +584,7 @@
             console.log(res);
             if (res.success) {
               document.location.href = "/details-received";
-            } else { 
+            } else {
               alert("Error in the server");
             }
           });
