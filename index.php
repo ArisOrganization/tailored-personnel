@@ -6,7 +6,7 @@ session_start();
 
 <head>
   <meta charset="UTF-8">
-  <title>Tailored Personel</title>
+  <title>Tailored Personnel Ltd</title>
   <meta name="description" content="A totally bespoke and tailored talent acquisition service.">
   <?php include "partials/head.php" ?>
 
@@ -63,7 +63,7 @@ session_start();
                     <p>Find your next top employee</p>
                   </div>
                   <ul>
-                    <li>Low recruitment fees - Only 8% commission </li>
+                    <li>Low recruitment fees - Only 12.5% commission </li>
                     <li>Dedicated recruitment representative</li>
                     <li>In-house meeting to map out your specific needs</li>
                     <li>Don’t pay any fees until we find you a new employee</li>
@@ -95,7 +95,7 @@ session_start();
                 </div>
                 <div class="process-item">
                   <img src="/assets/icons/process/recruitment.svg" />
-                  <p>History, References & Pre-screening</p>
+                  <p>History, References & Pre-Screening</p>
                 </div>
                 <div class="process-item">
                   <img src="/assets/icons/process/candidate.svg" />
@@ -176,7 +176,7 @@ session_start();
                 <div class="inner-chose-content">
                   <h4 class="thin">Competitive fee for Tailored Service</h4>
                   <p>
-                    The industry standard is 15%. Tailored personnel operate on 8% commission, offering our one of a
+                    The industry standard is 15%. Tailored Personnel operate on 12.5% commission, offering our one of a
                     kind, totally bespoke talent acquisition service that guarantees we find you the right person for
                     the job.
                   </p>
@@ -186,7 +186,7 @@ session_start();
             <div class='col-12 col-md-6'>
               <div class="chose-content">
                 <div class="inner-chose-content">
-                  <h4 class="thin">Fast, Effficent, Effective</h4>
+                  <h4 class="thin">Fast, Efficent, Effective</h4>
                   <p>
                     We aim to deliver candidates within 14 days. Once approved we push through the application to
                     completion, all while ensuring highest quality service to you and your new employee.
@@ -207,9 +207,7 @@ session_start();
               <div class="chose-content">
                 <div class="inner-chose-content">
                   <h4 class="thin">Acquisition & Retention</h4>
-                  <p>Our specific process that includes, pre screening and a 5 stage recruitment process ensures that we
-                    fulfill your requirements to your exact specification, making sure you only acquire and retain the
-                    talent you need for business success.</p>
+                  <p>Our specific process, that includes pre-screen and a five stage recruitment process, ensures that we fulfil your requirements to your exact specification, making sure you only acquire and retain the talent you need for business success.</p>
                 </div>
               </div>
             </div>
@@ -226,8 +224,8 @@ session_start();
                 <h3 class="thin"><span class="thick "> All Sectors</span>, All Levels</h3>
                 <p>
                   Whether you are looking to hire a senior executive through to a junior role, we put our team to work
-                  to help you find the right person for the job. We cover all business sectors providing you bespoke
-                  staff for your companies needs.
+                  to help you find the right person for the job. We cover all business sectors, providing you bespoke
+                  staff for your company's needs.
                   <br />
                   <br />
                   Typical roles we recruit for include:
@@ -264,9 +262,9 @@ session_start();
               <div class="faq-title-container">
                 <h4>Frequently Asked Questions</h4>
                 <p>
-                  There's alot of information to take in when
+                  There's a lot of information to take in when
                   embarking on a search for new staff,
-                  so we've put together a list of FAQ's in one handy place for you.
+                  so we've put together a list of FAQs in one handy place for you.
                 </p>
               </div>
               <div class="faq-content-container">
@@ -287,7 +285,7 @@ session_start();
                     permanent hiring fees and a range of other recruitment services. We also offer a flexible
                     recruitment pricing structure depending on whether you are looking to make a one-off hire or
                     multiple hires. If you would like to find out more about our recruitment agency fees, please get in
-                    touch today on .
+                    touch today on 03300 533273.
                   </p>
                 </div>
                 <div class="faq-item">
@@ -308,7 +306,7 @@ session_start();
                     The recruitment industry encompasses all personnel, companies and software relating to sourcing
                     talent, hiring and job seeking. Recruitment is one of the biggest industries in the world, with
                     almost 40,000 recruitment agencies in the UK alone, and hundreds of thousands of employees. Within
-                    the recruitment industry, Recruiters or Recruitment Consultants act as the intermediary between
+                    the recruitment industry, Recruiters or recruitment consultants act as the intermediary between
                     companies looking to hire candidates, and jobseekers searching for a new career opportunity.
                   </p>
                 </div>

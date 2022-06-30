@@ -111,14 +111,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   </div>
                   <div class="form-step step-2 d-none ">
                     <div class="step-title">
-                      <p>Step 2 - What Salary are you offering?</p>
+                      <p>Step 2 - What salary are you offering?</p>
                       <p class="step-req">
                         Please provide information regarding the position your company is recruiting for.
                       </p>
                     </div>
                     <div class="form-fields">
                       <fieldset>
-                        <label for='salary'>Salary you are offering?</label>
+                        <label for='salary'>What salary you are offering?</label>
                         <input type="text" name="salary" id="salary" placeholder="Example: £25,000 - £30,000">
                       </fieldset>
 

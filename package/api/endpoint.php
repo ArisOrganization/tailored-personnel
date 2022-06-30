@@ -20,7 +20,7 @@ $data;
 $jsonLogic = new logic();
 // $lead_email = "james@opopmedia.co.uk"; // testx
 // $lead_email = "pedro@opopmedia.co.uk"; // testx
-$lead_email = "david.taylor@tailored-personnel.com";
+$lead_email = "scott@tailored-personnel.com";
 
 if ($contentType === "application/json") {
     $content =  trim(file_get_contents("php://input"));
