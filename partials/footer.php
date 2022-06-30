@@ -19,7 +19,7 @@
             <!-- <li><a href="/terms">Terms and Conditions</a></li> -->
             <li><a target="_blank" href="/privacy.php">Privacy Policy</a></li>
             <li><a target="_blank" href="/cookie.php">Cookie Policy</a></li>
-            <li><a target="_blank" href="../docs/terms.pdf">Terms & Conditions</a></li>
+            <li><a target="_blank" href="../docs/newterms.pdf">Terms & Conditions</a></li>
           </ul>
           <p style="margin-top: 10px; margin-bottom: 10px; color: grey;">Bushbury House, 435 Wilmslow Road, Withington, Manchester, England, M20 4AF </p>
           <p style="text-decoration: none; color: grey;" href="tel:03300 533273"><a >03300 533273</a></p>
