@@ -65,7 +65,7 @@ session_start();
                   <ul>
                     <li>Low recruitment fees - Only 8% commission </li>
                     <li>Dedicated recruitment representative</li>
-                    <li> In house meeting to map out your specific needs</li>
+                    <li>In-house meeting to map out your specific needs</li>
                     <li>Don’t pay any fees until we find you a new employee</li>
                   </ul>
 
